@@ -315,6 +315,8 @@
 		oplus,gauge_stuck_time = <50>;
 		oplus,smooth_switch;
 		oplus,reserve_chg_soc = <1>;
+
+		oplus_spec,batt_full_time = <300>;
 	};
 
 	oplus_monitor: oplus,monitor {
@@ -1011,6 +1013,7 @@
 	oplus_chg_plc: oplus,plc_charge {
 		compatible = "oplus,plc_charge";
 		oplus,plc_soc = <90>;
+		oplus,plc_support_timeout;
 		oplus,plc_strategy-data = <&buck_simple_strategy>;
 		oplus,plc_strategy-names = "default";
 
